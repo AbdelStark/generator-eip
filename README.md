@@ -18,3 +18,10 @@ EIP generator is a Yeoman generator to kickstart Ethereum Improvement Proposal.
 npm install -g yo
 ```
 
+### Run the generator
+
+```shell script
+yo  eip
+```
+
+
