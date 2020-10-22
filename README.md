@@ -4,7 +4,7 @@
 
 # EIP Generator
 
-![EIP Generator Demo](demo/demo.gif)
+![EIP Generator Demo](demo/demo-eip-generator.gif)
 
 ## What is it ?
 EIP generator is a Yeoman generator to kickstart Ethereum Improvement Proposal.
