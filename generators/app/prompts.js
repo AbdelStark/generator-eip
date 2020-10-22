@@ -9,6 +9,8 @@ module.exports = {
     askForEIPStatus,
     askForDateCreated,
     askForDiscussionsTo,
+    askForRequirement,
+    askForReplacement,
 };
 
 async function askForEIPNumber() {
@@ -24,7 +26,7 @@ async function askForEIPNumber() {
     if (this.eipNumberAssigned) {
         const answers = await this.prompt([
             {
-                type: "String",
+                type: "number",
                 name: "eipNumber",
                 message: "What is the number assigned to the EIP ?"
             }
@@ -33,25 +35,25 @@ async function askForEIPNumber() {
     }
 }
 
-async function askForEIPTitle(){
+async function askForEIPTitle() {
     const answers = await this.prompt([
         {
             type: 'String',
             name: 'eipTitle',
             message: `What is the ${chalk.yellow('*title*')} of the EIP would you like to create ?`,
-            default: '<EIP title>',
+            default: "EIP title",
         },
     ]);
     this.eipTitle = answers.eipTitle;
 }
 
-async function askForDiscussionsTo(){
+async function askForDiscussionsTo() {
     const answers = await this.prompt([
         {
             type: 'String',
             name: 'eipDiscussionsTo',
             message: `What is the url of the ${chalk.yellow('*discussions*')} related to the EIP ?`,
-            default: '<URL>',
+            default: 'URL',
         },
     ]);
     this.eipDiscussionsTo = answers.eipDiscussionsTo;
@@ -179,4 +181,48 @@ async function askForDateCreated() {
     ]);
 
     this.eipDateCreated = answers.eipDateCreated;
+}
+
+async function askForRequirement() {
+    const eipRequiresAnswer = await this.prompt([
+        {
+            type: "confirm",
+            name: "eipRequires",
+            message: "Does this EIP depend on another EIP ?",
+            default: false,
+        }
+    ]);
+    this.eipRequires = eipRequiresAnswer.eipRequires;
+    if (this.eipRequires) {
+        const answers = await this.prompt([
+            {
+                type: "number",
+                name: "eipRequiresNumber",
+                message: "What is the number of the required EIP ?"
+            }
+        ]);
+        this.eipRequiresNumber = answers.eipRequiresNumber;
+    }
+}
+
+async function askForReplacement() {
+    const eipReplacesAnswer = await this.prompt([
+        {
+            type: "confirm",
+            name: "eipReplaces",
+            message: "Does this EIP replace another EIP ?",
+            default: false,
+        }
+    ]);
+    this.eipReplaces = eipReplacesAnswer.eipReplaces;
+    if (this.eipReplaces) {
+        const answers = await this.prompt([
+            {
+                type: "number",
+                name: "eipReplacesNumber",
+                message: "What is the number of the EIP to replace ?"
+            }
+        ]);
+        this.eipReplacesNumber = answers.eipReplacesNumber;
+    }
 }

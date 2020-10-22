@@ -12,6 +12,10 @@ module.exports = class extends Generator {
     initializing() {
         this.eipNumberAssigned = false;
         this.eipNumber = 0;
+        this.eipRequires = false;
+        this.eipReplaces = false;
+        this.eipRequiresNumber = 0;
+        this.eipReplacesNumber = 0;
         this._printWelcomeMessage();
     }
 
@@ -24,6 +28,8 @@ module.exports = class extends Generator {
             askForDiscussionsTo: prompts.askForDiscussionsTo,
             askForEIPStatus: prompts.askForEIPStatus,
             askForDateCreated: prompts.askForDateCreated,
+            askForRequirement: prompts.askForRequirement,
+            askForReplacement: prompts.askForReplacement,
         };
     }
 
@@ -47,6 +53,10 @@ module.exports = class extends Generator {
                 eipNumberAssigned: this.eipNumberAssigned,
                 eipNumber: this.eipNumber,
                 eipDiscussionsTo: this.eipDiscussionsTo,
+                eipRequires: this.eipRequires,
+                eipReplaces: this.eipReplaces,
+                eipRequiresNumber: this.eipRequiresNumber,
+                eipReplacesNumber: this.eipReplacesNumber,
             }
         );
         this.config.save();

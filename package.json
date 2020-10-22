@@ -1,6 +1,6 @@
 {
   "name": "generator-eip",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Ethereum Improvement Proposal generator based on Yeoman",
   "files": [
     "generators"

@@ -8,8 +8,10 @@ type: <%= eipType %>
 <% if (eipType == 'Standards Track') { %>category: <%= eipCategory %>
 <%}-%>
 created: <%= eipDateCreated %>
-requires (*optional): <EIP number(s)>
-replaces (*optional): <EIP number(s)>
+<% if (eipRequires) { %>requires: <%= eipRequiresNumber %>
+<%}-%>
+<% if (eipReplaces) { %>replaces: <%= eipReplacesNumber %>
+<%}-%>
 ---
 
 This is the suggested template for new EIPs.
