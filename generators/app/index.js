@@ -21,6 +21,7 @@ module.exports = class extends Generator {
 
     _prompting() {
         return {
+            askIfFirstEIP: prompts.askIfFirstEIP,
             askForEIPNumber: prompts.askForEIPNumber,
             askForEIPTitle: prompts.askForEIPTitle,
             askForEIPType: prompts.askForEIPType,

@@ -2,6 +2,7 @@ const chalk = require('chalk');
 const util = require('./util');
 
 module.exports = {
+    askIfFirstEIP,
     askForEIPNumber,
     askForEIPTitle,
     askForEIPType,
@@ -12,6 +13,36 @@ module.exports = {
     askForRequirement,
     askForReplacement,
 };
+
+async function askIfFirstEIP() {
+    const answers = await this.prompt([
+        {
+            type: "confirm",
+            name: "firstEip",
+            message: "Is is your first EIP ?",
+            default: this.firstEip,
+            store: true,
+        }
+    ]);
+    this.firstEip = answers.firstEip;
+    if (this.firstEip) {
+        this.log(`Please read those few considerations ${chalk.greenBright('before')} submitting any EIP.`);
+        this.log('* As a champion, you should ask the Ethereum community whether your idea has any chance of support.');
+
+        const answers = await this.prompt([
+            {
+                type: "confirm",
+                name: "continueEIP",
+                message: "Do you want to write your EIP now ?",
+                default: true,
+            }
+        ]);
+        this.continueEIP = answers.continueEIP;
+        if (!this.continueEIP) {
+            this.env.error("Aborting generator, see you soon.");
+        }
+    }
+}
 
 async function askForEIPNumber() {
     const eipNumberAssignedAnswer = await this.prompt([
