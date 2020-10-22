@@ -21,6 +21,7 @@ module.exports = class extends Generator {
             askForEIPTitle: prompts.askForEIPTitle,
             askForEIPType: prompts.askForEIPType,
             askForEIPAuthor: prompts.askForEIPAuthor,
+            askForDiscussionsTo: prompts.askForDiscussionsTo,
             askForEIPStatus: prompts.askForEIPStatus,
             askForDateCreated: prompts.askForDateCreated,
         };
@@ -45,6 +46,7 @@ module.exports = class extends Generator {
                 eipStatus: this.eipStatus,
                 eipNumberAssigned: this.eipNumberAssigned,
                 eipNumber: this.eipNumber,
+                eipDiscussionsTo: this.eipDiscussionsTo,
             }
         );
         this.config.save();

@@ -8,6 +8,7 @@ module.exports = {
     askForEIPAuthor,
     askForEIPStatus,
     askForDateCreated,
+    askForDiscussionsTo,
 };
 
 async function askForEIPNumber() {
@@ -37,11 +38,23 @@ async function askForEIPTitle(){
         {
             type: 'String',
             name: 'eipTitle',
-            message: `What is the ${chalk.yellow('*title*')} of the EIP would you like to create?`,
+            message: `What is the ${chalk.yellow('*title*')} of the EIP would you like to create ?`,
             default: '<EIP title>',
         },
     ]);
     this.eipTitle = answers.eipTitle;
+}
+
+async function askForDiscussionsTo(){
+    const answers = await this.prompt([
+        {
+            type: 'String',
+            name: 'eipDiscussionsTo',
+            message: `What is the url of the ${chalk.yellow('*discussions*')} related to the EIP ?`,
+            default: '<URL>',
+        },
+    ]);
+    this.eipDiscussionsTo = answers.eipDiscussionsTo;
 }
 
 async function askForEIPType() {
@@ -76,7 +89,7 @@ async function askForEIPType() {
         {
             type: 'list',
             name: 'eipType',
-            message: `Which ${chalk.yellow('*type*')} of EIP would you like to create?`,
+            message: `Which ${chalk.yellow('*type*')} of EIP would you like to create ?`,
             choices: typeChoices,
             default: 'Standards Track',
         },
@@ -84,7 +97,7 @@ async function askForEIPType() {
             when: answers => ['Standards Track'].includes(answers.eipType),
             type: 'list',
             name: 'eipCategory',
-            message: `Which ${chalk.yellow('*category*')} of Standards Track EIP would you like to create?`,
+            message: `Which ${chalk.yellow('*category*')} of Standards Track EIP would you like to create ?`,
             choices: categoryChoices,
             default: 'Core',
         },
@@ -98,14 +111,14 @@ async function askForEIPAuthor() {
         {
             type: 'String',
             name: 'eipAuthor',
-            message: `Who is the ${chalk.yellow('*author*')} of the EIP would you like to create?`,
+            message: `Who is the ${chalk.yellow('*author*')} of the EIP would you like to create ?`,
             default: this.eipAuthor,
             store: true,
         },
         {
             type: 'String',
             name: 'eipAuthorGithubUsername',
-            message: `What is the ${chalk.yellow('*github username*')} of the author?`,
+            message: `What is the ${chalk.yellow('*github username*')} of the author ?`,
             default: this.eipAuthorGithubUsername,
             store: true,
         },

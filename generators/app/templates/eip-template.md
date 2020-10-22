@@ -2,7 +2,7 @@
 eip: <%- eipNumberAssigned ? eipNumber : '<to be assigned>' %>
 title: <%= eipTitle %>
 author: <%= eipAuthor %> (@<%= eipAuthorGithubUsername %>)
-discussions-to: <URL>
+discussions-to: <%= eipDiscussionsTo %>
 status: <%= eipStatus %>
 type: <%= eipType %>
 <% if (eipType == 'Standards Track') { %>category: <%= eipCategory %>
