@@ -1,0 +1,28 @@
+{
+  "name": "generator-eip",
+  "version": "0.0.1",
+  "description": "Ethereum Improvement Proposal generator based on Yeoman",
+  "files": [
+    "generators"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdelhamidbakhta/generator-eip.git"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Abdelhamid Bakhta",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/abdelhamidbakhta/generator-eip/issues"
+  },
+  "homepage": "https://github.com/abdelhamidbakhta/generator-eip#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "yeoman-generator": "^4.12.0"
+  }
+}
