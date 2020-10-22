@@ -1,5 +1,5 @@
 {
-  "name": "generator-eip",
+  "name": "@abdelhamidbakhta/generator-eip",
   "version": "0.0.1",
   "description": "Ethereum Improvement Proposal generator based on Yeoman",
   "files": [
