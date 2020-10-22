@@ -1,6 +1,6 @@
 [![generator-eip-ci Actions Status](https://github.com/abdelhamidbakhta/generator-eip/workflows/generator-eip-ci/badge.svg)](https://github.com/abdelhamidbakhta/generator-eip/actions)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/abdelhamidbakhta/tx-api-gw/blob/master/LICENSE)
-[![sonar-quality-gate][sonar-quality-gate]][sonar-url] [![sonar-coverage][sonar-coverage]][sonar-url] [![sonar-bugs][sonar-bugs]][sonar-url] [![sonar-vulnerabilities][sonar-vulnerabilities]][sonar-url]
+[![sonar-quality-gate][sonar-quality-gate]][sonar-url][![sonar-bugs][sonar-bugs]][sonar-url] [![sonar-vulnerabilities][sonar-vulnerabilities]][sonar-url]
 
 # EIP Generator
 
