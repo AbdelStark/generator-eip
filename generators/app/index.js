@@ -18,6 +18,7 @@ module.exports = class extends Generator {
     _prompting() {
         return {
             askForEIPNumber: prompts.askForEIPNumber,
+            askForEIPTitle: prompts.askForEIPTitle,
             askForEIPType: prompts.askForEIPType,
             askForEIPAuthor: prompts.askForEIPAuthor,
             askForEIPStatus: prompts.askForEIPStatus,
@@ -36,6 +37,7 @@ module.exports = class extends Generator {
             this.destinationPath(this.eipDestinationPath),
             {
                 eipType: this.eipType,
+                eipTitle: this.eipTitle,
                 eipCategory: this.eipCategory,
                 eipAuthor: this.eipAuthor,
                 eipAuthorGithubUsername: this.eipAuthorGithubUsername,

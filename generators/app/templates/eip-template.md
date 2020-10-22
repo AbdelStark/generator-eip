@@ -1,6 +1,6 @@
 ---
 eip: <%- eipNumberAssigned ? eipNumber : '<to be assigned>' %>
-title: <EIP title>
+title: <%= eipTitle %>
 author: <%= eipAuthor %> (@<%= eipAuthorGithubUsername %>)
 discussions-to: <URL>
 status: <%= eipStatus %>

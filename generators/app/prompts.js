@@ -3,6 +3,7 @@ const util = require('./util');
 
 module.exports = {
     askForEIPNumber,
+    askForEIPTitle,
     askForEIPType,
     askForEIPAuthor,
     askForEIPStatus,
@@ -29,6 +30,18 @@ async function askForEIPNumber() {
         ]);
         this.eipNumber = answers.eipNumber;
     }
+}
+
+async function askForEIPTitle(){
+    const answers = await this.prompt([
+        {
+            type: 'String',
+            name: 'eipTitle',
+            message: `What is the ${chalk.yellow('*title*')} of the EIP would you like to create?`,
+            default: '<EIP title>',
+        },
+    ]);
+    this.eipTitle = answers.eipTitle;
 }
 
 async function askForEIPType() {
