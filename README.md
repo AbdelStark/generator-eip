@@ -1,5 +1,6 @@
 [![generator-eip-ci Actions Status](https://github.com/abdelhamidbakhta/generator-eip/workflows/generator-eip-ci/badge.svg)](https://github.com/abdelhamidbakhta/generator-eip/actions)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/abdelhamidbakhta/tx-api-gw/blob/master/LICENSE)
+[![sonar-quality-gate][sonar-quality-gate]][sonar-url] [![sonar-coverage][sonar-coverage]][sonar-url] [![sonar-bugs][sonar-bugs]][sonar-url] [![sonar-vulnerabilities][sonar-vulnerabilities]][sonar-url]
 
 # EIP Generator
 
@@ -24,4 +25,9 @@ npm install -g yo
 yo  eip
 ```
 
+[sonar-url]: https://sonarcloud.io/dashboard?id=abdelhamidbakhta_generator-eip
+[sonar-quality-gate]: https://sonarcloud.io/api/project_badges/measure?project=abdelhamidbakhta_generator-eip&metric=alert_status
+[sonar-coverage]: https://sonarcloud.io/api/project_badges/measure?project=abdelhamidbakhta_generator-eip&metric=coverage
+[sonar-bugs]: https://sonarcloud.io/api/project_badges/measure?project=abdelhamidbakhta_generator-eip&metric=bugs
+[sonar-vulnerabilities]: https://sonarcloud.io/api/project_badges/measure?project=abdelhamidbakhta_generator-eip&metric=vulnerabilities
 
