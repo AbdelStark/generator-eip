@@ -14,7 +14,11 @@
     "Ethereum",
     "Blockchain"
   ],
-  "author": "Abdelhamid Bakhta",
+  "author": {
+    "name": "Abdelhamid Bakhta",
+    "email": "abdelhamid.bakhta@consensys.net",
+    "url": "https://github.com/abdelhamidbakhta"
+  },
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/abdelhamidbakhta/generator-eip/issues"
